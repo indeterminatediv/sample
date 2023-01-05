@@ -2,7 +2,10 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
+
 st.set_page_config(layout = 'wide',page_title = 'Startup Analysis beta by DIVYOM')
+st.title("Analysis by DIVYOM")
 df = pd.read_csv('startup_cleaned.csv')
 df['date'] = pd.to_datetime(df['date'],errors = 'coerce')
 df['month'] = df['date'].dt.month
